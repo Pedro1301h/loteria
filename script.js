@@ -1,17 +1,21 @@
 
-let num =[]     //Vetor que receberá os números sorteados
 
-let qnt = 6     //quantidade de números a serem sorteados
 
-for(let i = 0;i<qnt;i++ ){
-    let sorteado = Math.floor(Math.random() * 26)   //sorteia um número entre 0 e 26
-    if((num.indexOf(sorteado) == -1) && (sorteado != 0)){   //SE o número sorteado não for encontrado no vetor e se for diferente de 0...
-        num.push(sorteado)                     //...insere na última posição do vetor
-    }else{
-        sorteado = Math.floor(Math.random() * 26)       //Se não, sortear novamente e...
-        qnt++                   //...soma 1 na quantidade de números a serem sorteados
-    }
-    
+function criaVetor(qntJogos,qntNum){    //Parâmtros(Quantos jogos, quantos números)
+    let vet = []    //Cria o vetor que receberá os valores
+    let sorteado
+    for(let i = 1; i <= qntJogos;i++){    
+        for(let c = 0;c < qntNum; c++){
+            sorteado = Math.floor(Math.random() * 61);
+            if((vet.indexOf(sorteado) == -1) && (sorteado != 0)){
+                vet.push(sorteado);
+            }else{
+                c--
+            }
+        }
+        console.log('Jogo '+i+': '+vet);
+        vet = []
+        
+    }   
 }
-
-console.log(num)
+criaVetor(20,6)
