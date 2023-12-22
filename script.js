@@ -1,21 +1,36 @@
 
+let btn = document.querySelector('#btn');
+let saidas = document.querySelector('#saidas')
 
-
-function criaVetor(qntJogos,qntNum){    //Parâmtros(Quantos jogos, quantos números)
-    let vet = []    //Cria o vetor que receberá os valores
-    let sorteado
-    for(let i = 1; i <= qntJogos;i++){    
-        for(let c = 0;c < qntNum; c++){
+btn.addEventListener('click',function criaVetor(){    //Parâmtros(Quantos jogos, quantos números)
+    let vet = [];    //Cria o vetor que receberá os valores
+    let sorteado;
+    for(let i = 1; i <= 10;i++){  
+        if(i > 9){  
+            saidas.innerHTML+=`<p>Jogo ${i}</p>`
+        }else{
+            saidas.innerHTML+=`<p>Jogo 0${i}</p>`
+        }
+        for(let c = 0;c < 6; c++){
             sorteado = Math.floor(Math.random() * 61);
             if((vet.indexOf(sorteado) == -1) && (sorteado != 0)){
                 vet.push(sorteado);
+                if(sorteado > 9){
+                    saidas.innerHTML+=`<span class="num">${sorteado}</span><br>`
+                }else{
+                    saidas.innerHTML+=`<span class="num">0${sorteado}</span><br>`
+                }
             }else{
-                c--
+                c--;
             }
         }
-        console.log('Jogo '+i+': '+vet);
-        vet = []
-        
-    }   
-}
-criaVetor(20,6)
+
+        console.log('J'+i+': '+vet);
+        vet = [];
+    }      
+    btn.removeEventListener('click',criaVetor)
+})
+
+
+
+
