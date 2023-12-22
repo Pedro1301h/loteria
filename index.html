@@ -12,10 +12,14 @@
     </header>
     <main id="principal">
         <div id="entradas">
-            <label for="loto">VALOR 1</label>
-            <input type="radio" name="jogo" id="loto" class="select">
-            <label for="mega">VALOR 2</label>
-            <input type="radio" name="jogo" id="mega" class="select">
+            <label for="">Jogo</label>
+            <select name="" id="select-jogo">
+                <option value="mega">Mega-sena</option>
+                <option value="loto">Lotofácil</option>
+            </select>
+            
+            <label for="quant-jogos">Quantos jogos?</label>
+            <input type="number" id="quant-jogos" min="0" placeholder="0" max="30">
             <input type="button" id="btn" value="Gerar">
         </div>
         <div id="saidas">

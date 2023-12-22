@@ -7,11 +7,11 @@ btn.addEventListener('click',function criaVetor(){    //Parâmtros(Quantos jogos
     let sorteado;
     for(let i = 1; i <= 10;i++){  
         if(i > 9){  
-            saidas.innerHTML+=`<p>Jogo ${i}</p>`
+            saidas.innerHTML+=`<p><br>Jogo ${i}</p>`
         }else{
-            saidas.innerHTML+=`<p>Jogo 0${i}</p>`
+            saidas.innerHTML+=`<p><br>Jogo 0${i}</p>`
         }
-        for(let c = 0;c < 6; c++){
+        for(let c = 0;c < 15; c++){
             sorteado = Math.floor(Math.random() * 61);
             if((vet.indexOf(sorteado) == -1) && (sorteado != 0)){
                 vet.push(sorteado);
