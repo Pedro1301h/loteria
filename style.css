@@ -7,42 +7,33 @@
 }
 
 #principal{
-    width: 450px;
-    margin:auto;
+    min-width: 957px;
+    padding-bottom: 50px;
     border: 2px black solid;
 }
 
 #entradas{
     border: 2px black solid;
-    line-height: 50px;
+    line-height: 100px;
     height: 100px;
     margin-bottom: 15px;
+    flex: 1 1 100%;
 }
 
 #entradas label, input, select{
     font-size: 20px;
 }
 
-#entradas > #btn{
-    display: block;
-    margin: auto;
-}
-
-#saidas{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+#saidas > p{
+    font-size: 1.5em;
     font-weight: bold;
+    margin: 50px 0;
 }
 
 #saidas > .num{
-    border: 2px black solid;
-    padding: 20px;
-    width: 50px;
-    height: 50px;
+    background-color: rgba(25, 243, 21, 0.364);
     border-radius: 50%;
-    padding: 15px;
+    padding: 5px;
     margin: 5px;
+    font-size: 2em;
 }
