@@ -6,8 +6,11 @@
     text-align: center;
 }
 
+body{
+    min-width: 835px;
+}
+
 #principal{
-    min-width: 957px;
     padding-bottom: 50px;
     border: 2px black solid;
 }
