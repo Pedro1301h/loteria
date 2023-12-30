@@ -4,39 +4,80 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    user-select: none;
 }
 
 body{
-    min-width: 835px;
+    min-width: 1000px;
+    background-color: rgb(23, 73, 130);
+}
+
+header{
+    background-color: rgb(3, 35, 72);
+    height: 80px;
+}
+
+header > h1{
+    color: aliceblue;
+    line-height: 80px;
+    font-size: 3em;
 }
 
 #principal{
     padding-bottom: 50px;
-    border: 2px black solid;
 }
 
 #entradas{
-    border: 2px black solid;
     line-height: 100px;
     height: 100px;
     margin-bottom: 15px;
     flex: 1 1 100%;
 }
 
-#entradas label, input, select{
+#entradas > label, input, select{
     font-size: 20px;
+    margin: 0 5px;
+    height: 30px;
+}
+
+input, select{
+    border: none;
+    border-radius: 5px;
+}
+
+#quant-jogos{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+label{
+    color: aliceblue;
+    font-weight: bold;
+}
+
+#btn{
+    width: 100px;
+    cursor: pointer;
+}
+
+#btn:hover{
+    background-color: rgba(25, 243, 21, 0.364);
+    color: aliceblue;
+    transition: .3s;
 }
 
 #saidas > p{
+    color: aliceblue;
     font-size: 1.5em;
     font-weight: bold;
-    margin: 50px 0;
+    margin: 50px 0 30px 0;
 }
 
 #saidas > .num{
     background-color: rgba(25, 243, 21, 0.364);
+    color: aliceblue;
     border-radius: 50%;
-    padding: 5px;
+    padding: 10px;
     margin: 5px;
     font-size: 2em;
 }
